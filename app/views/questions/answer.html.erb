@@ -1,0 +1,25 @@
+<div id="title">
+  <h3>Stupid Coaching</h3>
+</div>
+
+<div id="question">
+  <%= params[:question] %>
+  <div id="signature">
+    <%= '- You' %>
+  </div>
+</div>
+
+<div id="answer">
+  <% if params[:question] ==  'I am going to work' %>
+    <%= "Great!" %>
+  <% elsif params[:question].end_with? '?' %>
+    <%= "Silly question, get dressed and go to work!" %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+  <% end %>
+  <div id="signature">
+    <%= '- Coach' %>
+  </div>
+</div>
+
+<%= link_to 'Ask a new question', ask_path %>

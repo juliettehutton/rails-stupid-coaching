@@ -64,3 +64,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+group :test do
+  # to take screenshot
+  gem "launchy"
+end
